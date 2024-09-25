@@ -1,0 +1,14 @@
+<div>
+    <button (click)="start()" class="start-btn">Start</button>
+</div>
+<div class="offcanvas" [ngClass]="{'show': showOffcanvas}">
+    <img src="assets/icon.png" alt="Icon" class="offcanvas-icon">
+    <div class="progress">
+        <div class="progress-bar" [style.width]="progress + '%'">
+            {{ progress }}%
+        </div>
+    </div>
+    <button (click)="toggleOffcanvas()" class="toggle-btn">
+        {{ showOffcanvas ? 'Hide' : 'Show' }} Stop
+    </button>
+</div>
